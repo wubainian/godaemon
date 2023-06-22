@@ -4,6 +4,7 @@ import (
 	"errors"
 	"os"
 
+	"github.com/wubainian/godaemon/global"
 	"go.uber.org/zap"
 )
 

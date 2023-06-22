@@ -3,6 +3,7 @@ package internal
 import (
 	"fmt"
 
+	"github.com/wubainian/godaemon/global"
 	"gorm.io/gorm/logger"
 )
 

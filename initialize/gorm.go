@@ -3,6 +3,7 @@ package initialize
 import (
 	"os"
 
+	"github.com/wubainian/godaemon/global"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )

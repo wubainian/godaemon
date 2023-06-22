@@ -2,6 +2,8 @@ package request
 
 import (
 	"fmt"
+
+	"github.com/wubainian/godaemon/config"
 )
 
 type InitDB struct {

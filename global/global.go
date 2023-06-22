@@ -4,6 +4,7 @@ import (
 	"sync"
 
 	"github.com/spf13/viper"
+	"github.com/wubainian/godaemon/config"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
