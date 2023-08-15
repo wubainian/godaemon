@@ -9,4 +9,10 @@ type Server struct {
 	Pgsql  Pgsql           `mapstructure:"pgsql" json:"pgsql" yaml:"pgsql"`
 	Oracle Oracle          `mapstructure:"oracle" json:"oracle" yaml:"oracle"`
 	DBList []SpecializedDB `mapstructure:"db-list" json:"db-list" yaml:"db-list"`
+	Redis  Redis           `mapstructure:"redis" json:"redis" yaml:"redis"`
+	JWT    JWT             `mapstructure:"jwt" json:"jwt" yaml:"jwt"`
+	Local  Local           `mapstructure:"local" json:"local" yaml:"local"`
+	Email  Email           `mapstructure:"email" json:"email" yaml:"email"`
+	// 跨域配置
+	Cors CORS `mapstructure:"cors" json:"cors" yaml:"cors"`
 }

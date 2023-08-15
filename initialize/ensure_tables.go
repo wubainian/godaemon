@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/wubainian/godaemon/model/example"
+	sysModel "github.com/wubainian/godaemon/model/system"
 	"github.com/wubainian/godaemon/service/system"
 	"gorm.io/gorm"
 )
@@ -38,6 +39,14 @@ func (e *ensureTables) MigrateTable(ctx context.Context) (context.Context, error
 		example.ExaCustomer{},
 		example.ExaFileChunk{},
 		example.ExaFileUploadAndDownload{},
+		sysModel.SysUser{},
+		sysModel.SysBaseMenu{},
+		sysModel.SysAuthority{},
+		sysModel.JwtBlacklist{},
+		sysModel.SysOperationRecord{},
+		sysModel.SysBaseMenuParameter{},
+		sysModel.SysBaseMenuBtn{},
+		sysModel.SysAuthorityBtn{},
 	}
 	for _, t := range tables {
 		_ = db.AutoMigrate(&t)
@@ -57,6 +66,7 @@ func (e *ensureTables) TableCreated(ctx context.Context) bool {
 		example.ExaCustomer{},
 		example.ExaFileChunk{},
 		example.ExaFileUploadAndDownload{},
+		sysModel.JwtBlacklist{},
 	}
 	yes := true
 	for _, t := range tables {
