@@ -3,6 +3,7 @@ package global
 import (
 	"sync"
 
+	"github.com/flipped-aurora/gin-vue-admin/server/utils/timer"
 	"github.com/go-redis/redis/v8"
 	"github.com/songzhibin97/gkit/cache/local_cache"
 	"github.com/spf13/viper"
@@ -20,7 +21,8 @@ var (
 	GVA_VP                  *viper.Viper
 	GVA_REDIS               *redis.Client
 	BlackCache              local_cache.Cache
-	GVA_Concurrency_Control = &singleflight.Group{}
+	GVA_Concurrency_Control             = &singleflight.Group{}
+	GVA_Timer               timer.Timer = timer.NewTimerTask()
 	lock                    sync.RWMutex
 )
 
