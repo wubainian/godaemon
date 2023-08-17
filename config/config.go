@@ -14,6 +14,7 @@ type Server struct {
 	Local  Local           `mapstructure:"local" json:"local" yaml:"local"`
 	Email  Email           `mapstructure:"email" json:"email" yaml:"email"`
 	// 跨域配置
-	Cors  CORS  `mapstructure:"cors" json:"cors" yaml:"cors"`
-	Timer Timer `mapstructure:"timer" json:"timer" yaml:"timer"`
+	Cors   CORS   `mapstructure:"cors" json:"cors" yaml:"cors"`
+	Timer  Timer  `mapstructure:"timer" json:"timer" yaml:"timer"`
+	Dnslog Dnslog `mapstructure:"dnslog" json:"dnslog" yaml:"dnslog"`
 }
